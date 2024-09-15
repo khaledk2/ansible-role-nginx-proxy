@@ -6,7 +6,9 @@ upstream {{ item.name }} {
   {{ item.balance }};
 {%   endif %}
 {%   for server in item.servers %}
-  server {{ server }};
+  server {{ server }} max_fails= {{ max_fails }} fail_timeout={{ fail_timeout }};
 {%   endfor %}
+keepalive {{ keepalive }}};
+
 }
 {% endfor %}
