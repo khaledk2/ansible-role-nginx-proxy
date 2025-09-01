@@ -37,7 +37,7 @@ def test_get_alias(host):
 ])
 def test_proxy_limit_method(host, method, expectcode):
     out = host.check_output(
-        "curl -I -X %s -H 'Host: other' http://localhost/limitget" % method)
+        "curl -I -X %s -H 'Host: other' http://localhost/limitget/" % method)
     assert ('HTTP/1.1 %d' % expectcode) in out
 
 
