@@ -86,11 +86,11 @@
           nginx_proxy_backends:
             - name: other
               location: /other/
-              server: http://other/
+              server: http://127.0.0.1/
               cache_validity: 1d
             - name: limitget
               location: /limitget/
-              server: http://other/
+              server: http://127.0.0.1/
               limit_methods: GET HEAD
           nginx_proxy_direct_locations:
             - location: "^~ /custom"
