@@ -10,3 +10,5 @@
     name: ome.nginx
   vars:
     nginx_systemd_setup: "{{ nginx_proxy_systemd_setup }}"
+    nginx_version: 1.28.0
+
